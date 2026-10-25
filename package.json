@@ -1,0 +1,53 @@
+{
+  "name": "@realldz/oneuni-api",
+  "version": "1.0.0",
+  "description": "TypeScript client for OneUni student portals.",
+  "keywords": [
+    "oneuni",
+    "api-client",
+    "typescript"
+  ],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "bun": "./src/index.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.18.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realldz/oneuni-api.git"
+  },
+  "scripts": {
+    "clean": "bun ./scripts/clean.ts",
+    "build": "bun run clean && bun run build:bundle && bun run build:types",
+    "build:bundle": "bun build src/index.ts --outdir dist --format esm --target node --packages external --sourcemap=linked",
+    "build:types": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "bun test"
+  },
+  "dependencies": {
+    "axios": "^1.20.0",
+    "cheerio": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.1",
+    "typescript": "^5.9.3"
+  }
+}
