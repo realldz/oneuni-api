@@ -5,23 +5,14 @@ install it directly from this repository.
 
 ## Install
 
-Private repository: clone it, then install the packed tarball.
-
 ```bash
-git clone https://github.com/realldz/oneuni-api.git
-cd oneuni-api
-bun pm pack       # dist/ is committed, so no build is required
+bun add git+https://github.com/realldz/oneuni-api.git
+# or: npm install git+https://github.com/realldz/oneuni-api.git
 ```
 
-In the consuming project:
-
-```bash
-bun add file:../oneuni-api/realldz-oneuni-api-<version>.tgz
-```
-
-Run `bun install && bun run build` in this repository only when you change the source (then commit
-`dist/`). Node.js projects can also use
-`npm install git+https://github.com/realldz/oneuni-api.git` with git credentials configured.
+`dist/` is committed, so Node.js consumers need no build step; Bun resolves `src/index.ts`
+directly through the `bun` export condition. Run `bun install && bun run build` in this repository
+only when changing the source (then commit `dist/`).
 
 ## Usage
 
