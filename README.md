@@ -10,9 +10,7 @@ Private repository: clone it, then install the packed tarball.
 ```bash
 git clone https://github.com/realldz/oneuni-api.git
 cd oneuni-api
-bun install
-bun run build     # dist/ is committed; rebuild after source changes
-bun pm pack       # realldz-oneuni-api-<version>.tgz
+bun pm pack       # dist/ is committed, so no build is required
 ```
 
 In the consuming project:
@@ -21,9 +19,9 @@ In the consuming project:
 bun add file:../oneuni-api/realldz-oneuni-api-<version>.tgz
 ```
 
-Node.js projects can also use `npm install git+https://github.com/realldz/oneuni-api.git`
-with git credentials configured. `dist/` is committed, so Node.js consumers need no build step;
-Bun resolves `src/index.ts` directly through the `bun` export condition.
+Run `bun install && bun run build` in this repository only when you change the source (then commit
+`dist/`). Node.js projects can also use
+`npm install git+https://github.com/realldz/oneuni-api.git` with git credentials configured.
 
 ## Usage
 
