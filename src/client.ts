@@ -81,7 +81,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Infrastructure                                                      */
+  /* Infrastructure                                                     */
   /* ------------------------------------------------------------------ */
 
   private requireBaseUrl(): string {
@@ -129,7 +129,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Authentication                                                      */
+  /* Authentication                                                     */
   /* ------------------------------------------------------------------ */
 
   /**
@@ -196,7 +196,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Schedule / exams                                                    */
+  /* Schedule / exams                                                   */
   /* ------------------------------------------------------------------ */
 
   async getSchedule(
@@ -215,7 +215,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Student info / grades                                               */
+  /* Student info / grades                                              */
   /* ------------------------------------------------------------------ */
 
   async getStudentInfo(token: string): Promise<StudentInfoResponse> {
@@ -235,7 +235,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* News                                                                */
+  /* News                                                               */
   /* ------------------------------------------------------------------ */
 
   async getNewsCategories(token: string): Promise<NewsCategory[]> {
@@ -272,7 +272,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Attendance                                                          */
+  /* Attendance                                                         */
   /* ------------------------------------------------------------------ */
 
   async getListCheckin(token: string): Promise<ListCheckinResponse> {
@@ -296,7 +296,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Reminders / notices                                                 */
+  /* Reminders / notices                                                */
   /* ------------------------------------------------------------------ */
 
   async getNotices(token: string): Promise<NoticeResponse> {
@@ -326,7 +326,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Debt / receipts                                                     */
+  /* Debt / receipts                                                    */
   /* ------------------------------------------------------------------ */
 
   async getDebt(token: string): Promise<DebtResponse> {
@@ -349,7 +349,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Training assessment                                                 */
+  /* Training assessment                                                */
   /* ------------------------------------------------------------------ */
 
   async getDanhGiaRenLuyen(
@@ -365,7 +365,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Academics (additional)                                              */
+  /* Academics (additional)                                             */
   /* ------------------------------------------------------------------ */
 
   /** List of the student's semesters/terms (`SinhVien/DotTheoSinhVien`). */
@@ -476,7 +476,7 @@ export class OneUniClient {
   }
 
   /* ------------------------------------------------------------------ */
-  /* Payments (additional)                                               */
+  /* Payments (additional)                                              */
   /* ------------------------------------------------------------------ */
 
   /** List of banks/payment methods (`Payment/Banks`). */
